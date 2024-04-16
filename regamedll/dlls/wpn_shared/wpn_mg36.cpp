@@ -30,12 +30,10 @@ void CMG36::Precache()
 	PRECACHE_MODEL("models/w_mg36.mdl");
 
 	PRECACHE_SOUND("weapons/mg36-1.wav");
-	PRECACHE_SOUND("weapons/mg36-2.wav");
-	PRECACHE_SOUND("weapons/mg36_boxout.wav");
-	PRECACHE_SOUND("weapons/mg36_boxin.wav");
-	PRECACHE_SOUND("weapons/mg36_chain.wav");
-	PRECACHE_SOUND("weapons/mg36_coverup.wav");
-	PRECACHE_SOUND("weapons/mg36_coverdown.wav");
+	PRECACHE_SOUND("weapons/mg36_boltfull.wav");
+	PRECACHE_SOUND("weapons/mg36_clipin.wav");
+	PRECACHE_SOUND("weapons/mg36_clipout.wav");
+	PRECACHE_SOUND("weapons/mg36_draw.wav");
 
 	m_iShell = PRECACHE_MODEL("models/rshell.mdl");
 	m_usFireMG36 = PRECACHE_EVENT(1, "events/mg36.sc");
@@ -49,10 +47,10 @@ int CMG36::GetItemInfo(ItemInfo *p)
 	p->pszAmmo2 = nullptr;
 	p->iMaxAmmo2 = -1;
 	p->iMaxClip = MG36_MAX_CLIP;
-	p->iSlot = 0;
-	p->iPosition = 4;
+	p->iSlot = 0; //primary
+	p->iPosition = 20; //idk how to determine this
 	p->iId = m_iId = WEAPON_MG36;
-	p->iFlags = 0;
+	p->iFlags = 0; //special conditions
 	p->iWeight = MG36_WEIGHT;
 
 	return 1;
@@ -168,7 +166,7 @@ void CMG36::MG36Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim)
 	}
 }
 
-void CMG36::SecondaryAttack()
+void CMG36::SecondaryAttack() //can zoom
 {
 	if (m_pPlayer->m_iFOV == DEFAULT_FOV)
 		m_pPlayer->pev->fov = m_pPlayer->m_iFOV = 55;

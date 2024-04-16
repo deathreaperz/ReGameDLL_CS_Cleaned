@@ -2420,7 +2420,6 @@ char *CArmoury::m_ItemModels[] = {
 	"models/w_kevlar.mdl",
 	"models/w_assault.mdl",
 	"models/w_smokegrenade.mdl",
-	"models/w_mg36.mdl", //new weapon
 
 #ifdef REGAMEDLL_ADD
 	"models/w_shield.mdl",
@@ -2433,9 +2432,10 @@ char *CArmoury::m_ItemModels[] = {
 	"models/w_elite.mdl",
 	"models/w_fiveseven.mdl",
 	"models/w_p228.mdl",
-	"models/w_deagle.mdl"
+	"models/w_deagle.mdl",
 #endif
-
+	//new weapon starts here
+	"models/w_mg36.mdl"
 };
 
 void CArmoury::Spawn()
@@ -2595,7 +2595,7 @@ struct ArmouryItemStruct
 	{ "weapon_m3",        "buckshot",   24, MAX_AMMO_BUCKSHOT   }, // ARMOURY_M3
 	{ "weapon_xm1014",    "buckshot",   24, MAX_AMMO_BUCKSHOT   }, // ARMOURY_XM1014
 	{ "weapon_m249",      "556NatoBox", 60, MAX_AMMO_556NATOBOX }, // ARMOURY_M249
-	{ "weapon_mg36",      "556NatoBox", 60, MAX_AMMO_556NATOBOX }, // ARMOURY_M249 //new weapon
+	{ "weapon_mg36",      "556NatoBox", 60, MAX_AMMO_556NATOBOX }, // ARMOURY_MG36 //new weapon
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_FLASHBANG
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_HEGRENADE
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_KEVLAR

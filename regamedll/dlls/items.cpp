@@ -40,7 +40,8 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_HEALTHKIT,     "item_healthkit"),
 	DEFINE_ITEMINFO(ITEM_ANTIDOTE,      "item_antidote"),
 	DEFINE_ITEMINFO(ITEM_BATTERY,       "item_battery"),
-	DEFINE_ITEMINFO(ITEM_MG36,       "item_mg36"), //new weapon
+	//new weapon starts here
+	DEFINE_ITEMINFO(ITEM_MG36,       "weapon_mg36"),
 };
 
 LINK_ENTITY_TO_CLASS(world_items, CWorldItem, CCSWorldItem)
