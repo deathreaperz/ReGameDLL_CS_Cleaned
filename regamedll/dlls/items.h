@@ -84,7 +84,8 @@ enum ItemID
 	ITEM_SODACAN,
 	ITEM_HEALTHKIT,
 	ITEM_ANTIDOTE,
-	ITEM_BATTERY
+	ITEM_BATTERY,
+	ITEM_MG36 //new weapon
 };
 
 class CItem: public CBaseEntity

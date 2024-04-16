@@ -1211,12 +1211,23 @@ void BuyRifle(CBasePlayer *pPlayer, int iSlot)
 	BuyWeaponByWeaponID(pPlayer, buyWeapon);
 }
 
-void BuyMachineGun(CBasePlayer *pPlayer, int iSlot)
+void BuyMachineGun(CBasePlayer *pPlayer, int iSlot) //new weapon
 {
-	if (iSlot != 1)
+	if (iSlot < 1 || iSlot > 2)
 		return;
 
-	BuyWeaponByWeaponID(pPlayer, WEAPON_M249);
+	WeaponIdType buyWeapon = WEAPON_NONE;
+	switch (iSlot)
+	{
+	case 1:
+		buyWeapon = WEAPON_MG36;
+		break;
+	case 2:
+		buyWeapon = WEAPON_M249;
+		break;
+	}
+
+	BuyWeaponByWeaponID(pPlayer, buyWeapon);
 }
 
 LINK_HOOK_VOID_CHAIN(BuyItem, (CBasePlayer *pPlayer, int iSlot), pPlayer, iSlot)
@@ -4008,6 +4019,7 @@ void ClientPrecache()
 	PRECACHE_MODEL("models/p_famas.mdl");
 	PRECACHE_MODEL("models/p_shield.mdl");
 	PRECACHE_MODEL("models/w_shield.mdl");
+	PRECACHE_MODEL("models/p_mg36.mdl"); //new weapon
 
 	Vector temp = g_vecZero;
 	Vector vMin(-38, -24, -41);
@@ -4123,6 +4135,7 @@ void ClientPrecache()
 	}
 
 	ENGINE_FORCE_UNMODIFIED(force_model_specifybounds, (float *)&vMin, (float *)&vMax, "models/p_m249.mdl");
+	ENGINE_FORCE_UNMODIFIED(force_model_specifybounds, (float *)&vMin, (float *)&vMax, "models/p_mg36.mdl"); //new weapon
 
 	vMin = Vector(-7, -7, -15);
 	vMax = Vector(7, 7, 15);

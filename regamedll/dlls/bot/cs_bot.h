@@ -32,7 +32,7 @@
 #include "bot/cs_bot_manager.h"
 #include "bot/cs_bot_chatter.h"
 
-const int MAX_BUY_WEAPON_PRIMARY   = 13;
+const int MAX_BUY_WEAPON_PRIMARY   = 14; //add new weapon
 const int MAX_BUY_WEAPON_SECONDARY = 3;
 
 enum

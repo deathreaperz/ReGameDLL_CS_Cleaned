@@ -371,8 +371,11 @@ bool CCSBot::IsUsingShotgun() const
 // Returns true if using the big 'ol machinegun
 bool CCSBot::IsUsingMachinegun() const
 {
-	CBasePlayerWeapon *pCurrentWeapon = GetActiveWeapon();
-	if (pCurrentWeapon && pCurrentWeapon->m_iId == WEAPON_M249)
+	CBasePlayerWeapon* pCurrentWeapon = GetActiveWeapon();
+	if (!pCurrentWeapon)
+		return false;
+
+	if (pCurrentWeapon->m_iId == WEAPON_M249 || pCurrentWeapon->m_iId == WEAPON_MG36) //new weapon
 		return true;
 
 	return false;

@@ -40,6 +40,7 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_HEALTHKIT,     "item_healthkit"),
 	DEFINE_ITEMINFO(ITEM_ANTIDOTE,      "item_antidote"),
 	DEFINE_ITEMINFO(ITEM_BATTERY,       "item_battery"),
+	DEFINE_ITEMINFO(ITEM_MG36,       "item_mg36"), //new weapon
 };
 
 LINK_ENTITY_TO_CLASS(world_items, CWorldItem, CCSWorldItem)
@@ -540,6 +541,7 @@ ItemID GetItemIdByArmoury(ArmouryItemPack armoury)
 	case ARMOURY_SG550: return ITEM_SG550;
 	case ARMOURY_GALIL: return ITEM_GALIL;
 	case ARMOURY_UMP45: return ITEM_UMP45;
+	case ARMOURY_MG36: return ITEM_MG36; //new weapon
 	default: return ITEM_NONE;
 	}
 }
@@ -578,6 +580,7 @@ ItemID GetItemIdByWeaponId(int weaponId)
 	case WEAPON_SG550: return ITEM_SG550;
 	case WEAPON_GALIL: return ITEM_GALIL;
 	case WEAPON_UMP45: return ITEM_UMP45;
+	case WEAPON_MG36: return ITEM_MG36; //new weapon
 	default: return ITEM_NONE;
 	}
 }

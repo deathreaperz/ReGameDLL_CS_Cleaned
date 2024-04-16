@@ -561,6 +561,9 @@
     <ClCompile Include="..\public\tier0\assert_dialog.cpp">
       <Filter>public\tier0</Filter>
     </ClCompile>
+    <ClCompile Include="..\dlls\wpn_shared\wpn_mg36.cpp">
+      <Filter>dlls\wpn_shared</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\version\version.h">

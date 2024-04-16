@@ -231,3 +231,5 @@ class CCSItemAirBox: public CCSArmoury {};
 class CCSPointBaseCommand: public CCSPointEntity {};
 class CCSPointClientCommand: public CCSPointBaseCommand {};
 class CCSPointServerCommand: public CCSPointBaseCommand {};
+//new weapon class starts here
+class CCSMG36 : public CCSPlayerWeapon {};

@@ -61,6 +61,7 @@ enum WeaponIdType
 	WEAPON_AK47,
 	WEAPON_KNIFE,
 	WEAPON_P90,
+	WEAPON_MG36, //new weapon
 	WEAPON_SHIELDGUN = 99
 };
 
@@ -138,6 +139,7 @@ enum WeaponCostType
 	GALIL_PRICE     = 2000,
 	FAMAS_PRICE     = 2250,
 	SHIELDGUN_PRICE = 2200,
+	MG36_PRICE = 3500, //new weapon
 };
 
 enum WeaponState
@@ -183,6 +185,7 @@ enum ClipGiveDefault
 	AK47_DEFAULT_GIVE           = 30,
 	//KNIFE_DEFAULT_GIVE        = 1,
 	P90_DEFAULT_GIVE            = 50,
+	MG36_DEFAULT_GIVE            = 100, //new weapon
 };
 
 enum ClipSizeType
@@ -211,6 +214,7 @@ enum ClipSizeType
 	SG552_MAX_CLIP      = 30,
 	AK47_MAX_CLIP       = 30,
 	P90_MAX_CLIP        = 50,
+	MG36_MAX_CLIP        = 100, //new weapon
 };
 
 enum WeightWeapon
@@ -229,11 +233,11 @@ enum WeightWeapon
 	UMP45_WEIGHT        = 25,
 	SG550_WEIGHT        = 20,
 	GALIL_WEIGHT        = 25,
-	FAMAS_WEIGHT        = 75,
+	FAMAS_WEIGHT        = 25, //fix
 	USP_WEIGHT          = 5,
 	AWP_WEIGHT          = 30,
 	MP5NAVY_WEIGHT      = 25,
-	M249_WEIGHT         = 25,
+	M249_WEIGHT         = 75, //fix
 	M3_WEIGHT           = 20,
 	M4A1_WEIGHT         = 25,
 	TMP_WEIGHT          = 25,
@@ -244,6 +248,7 @@ enum WeightWeapon
 	AK47_WEIGHT         = 25,
 	P90_WEIGHT          = 26,
 	KNIFE_WEIGHT        = 0,
+	MG36_WEIGHT        = 75, //new weapon
 };
 
 enum MaxAmmoType
@@ -426,7 +431,7 @@ struct WeaponSlotInfo
 	const char *weaponName;
 };
 
-extern AutoBuyInfoStruct g_autoBuyInfo[35];
+extern AutoBuyInfoStruct g_autoBuyInfo[36]; //added new weapons
 extern WeaponStruct g_weaponStruct[MAX_WEAPONS];
 
 // WeaponType

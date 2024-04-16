@@ -33,7 +33,7 @@ class CBasePlayer;
 const float MAX_NORMAL_BATTERY    = 100.0f;
 const float MAX_DIST_RELOAD_SOUND = 512.0f;
 
-#define MAX_WEAPONS                 32
+#define MAX_WEAPONS                 33 //added new weapon
 
 #define ITEM_FLAG_SELECTONEMPTY     		BIT(0)
 #define ITEM_FLAG_NOAUTORELOAD      		BIT(1)
@@ -108,6 +108,7 @@ enum ArmouryItemPack
 	ARMOURY_FIVESEVEN,
 	ARMOURY_P228,
 	ARMOURY_DEAGLE,
+	ARMOURY_MG36, //new weapon
 };
 
 struct ItemInfo
@@ -1330,6 +1331,58 @@ private:
 	unsigned short m_usFireM249;
 };
 
+//new weapon settings
+const float MG36_MAX_SPEED = 210.0f;
+const float MG36_DAMAGE = 25.0f;
+const float MG36_RANGE_MODIFER = 0.95f;
+const float MG36_RELOAD_TIME = 4.0f;
+#ifdef REGAMEDLL_FIXES
+const float MG36_ACCURACY_DIVISOR = 190.0f;
+#else
+const int MG36_ACCURACY_DIVISOR = 190;
+#endif
+
+enum mg36_e
+{
+	MG36_IDLE1,
+	MG36_SHOOT1,
+	MG36_SHOOT2,
+	MG36_SHOOT3,
+	MG36_RELOAD,
+	MG36_DRAW,
+};
+
+class CMG36 : public CBasePlayerWeapon
+{
+public:
+	virtual void Spawn();
+	virtual void Precache();
+	virtual int GetItemInfo(ItemInfo* p);
+	virtual BOOL Deploy();
+	virtual float GetMaxSpeed() { return MG36_MAX_SPEED; }
+	virtual int iItemSlot() { return PRIMARY_WEAPON_SLOT; }
+	virtual void PrimaryAttack();
+	virtual void SecondaryAttack();
+	virtual void Reload();
+	virtual void WeaponIdle();
+	virtual BOOL UseDecrement()
+	{
+#ifdef CLIENT_WEAPONS
+		return TRUE;
+#else
+		return FALSE;
+#endif
+	}
+
+public:
+	void MG36Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim);
+
+	int m_iShell;
+	int iShellOn;
+
+private:
+	unsigned short m_usFireMG36;
+};
 
 const float M3_MAX_SPEED   = 230.0f;
 const float M3_DAMAGE      = 20.0f;

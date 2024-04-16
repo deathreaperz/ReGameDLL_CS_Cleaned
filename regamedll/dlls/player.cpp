@@ -150,6 +150,7 @@ const char *GetCSModelName(int item_id)
 	case WEAPON_KNIFE:        modelName = "models/w_knife.mdl"; break;
 	case WEAPON_P90:          modelName = "models/w_p90.mdl"; break;
 	case WEAPON_SHIELDGUN:    modelName = "models/w_shield.mdl"; break;
+	case WEAPON_MG36:    modelName = "models/w_mg36.mdl"; break; //new weapon
 	default:
 		ALERT(at_console, "CBasePlayer::PackDeadPlayerItems(): Unhandled item- not creating weaponbox\n");
 	}
@@ -1165,6 +1166,9 @@ BOOL EXT_FUNC CBasePlayer::__API_HOOK(TakeDamage)(entvars_t *pevInflictor, entva
 			case WEAPON_GALIL:
 			case WEAPON_AK47:
 				flRatio *= 1.55;
+				break;
+			case WEAPON_MG36: //new weapon
+				flRatio *= 1.5;
 				break;
 			}
 		}
@@ -3445,6 +3449,7 @@ NOXREF void CBasePlayer::ThrowPrimary()
 	ThrowWeapon("weapon_scout");
 	ThrowWeapon("weapon_galil");
 	ThrowWeapon("weapon_famas");
+	ThrowWeapon("weapon_mg36"); //new weapon
 
 	DropShield();
 }
@@ -9319,7 +9324,7 @@ const char *GetBuyStringForWeaponClass(int weaponClass)
 	case WEAPONCLASS_SUBMACHINEGUN:
 		return "p90 ump45 mp5 tmp mac10";
 	case WEAPONCLASS_MACHINEGUN:
-		return "m249";
+		return "m249 mg36"; //new weapon
 	case WEAPONCLASS_RIFLE:
 		return "sg552 aug ak47 m4a1 galil famas";
 	}

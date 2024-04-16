@@ -173,6 +173,7 @@ BuyInfo primaryWeaponBuyInfoCT[MAX_BUY_WEAPON_PRIMARY] =
 	{ SNIPER_RIFLE,     true,  "sg550"  }, // WEAPON_SG550
 	{ SNIPER_RIFLE,     true,  "awp"    }, // WEAPON_AWP
 	{ MACHINE_GUN,      false, "m249"   }, // WEAPON_M249
+	{ MACHINE_GUN,      false, "mg36"   }, // WEAPON_MG36 //new weapon
 };
 
 BuyInfo secondaryWeaponBuyInfoCT[MAX_BUY_WEAPON_SECONDARY] =
@@ -199,6 +200,7 @@ BuyInfo primaryWeaponBuyInfoT[MAX_BUY_WEAPON_PRIMARY] =
 	{ SNIPER_RIFLE,     true,  "awp"    }, // WEAPON_AWP
 	{ SNIPER_RIFLE,     true,  "g3sg1"  }, // WEAPON_G3SG1
 	{ MACHINE_GUN,      false, "m249"   }, // WEAPON_M249
+	{ MACHINE_GUN,      false, "mg36"   }, // WEAPON_MG36 //new weapon
 };
 
 BuyInfo secondaryWeaponBuyInfoT[MAX_BUY_WEAPON_SECONDARY] =

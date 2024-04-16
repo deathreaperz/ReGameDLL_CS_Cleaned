@@ -69,8 +69,9 @@ public:
 	virtual BOOL UseDecrement() { return FALSE; }
 };
 
+//new weapon class starts here
 class CDummyWeaponClassExtra:
-	public CDummyWeaponClass
+	public CDummyWeaponClass, public CMG36
 {
 public:
 	virtual void Precache() {};

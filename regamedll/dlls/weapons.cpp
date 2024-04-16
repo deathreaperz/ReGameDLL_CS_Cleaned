@@ -68,6 +68,7 @@ float GetBaseAccuracy(WeaponIdType id)
 		return 0.15f;
 	case WEAPON_UMP45:
 	case WEAPON_MP5N:
+	case WEAPON_MG36: //new weapon
 		return 0.0f;
 	}
 
@@ -320,8 +321,9 @@ void WeaponsPrecache()
 	UTIL_PrecacheOtherWeapon("weapon_scout");
 	UTIL_PrecacheOther("ammo_762nato");
 
-	// m249
+	// machine gun
 	UTIL_PrecacheOtherWeapon("weapon_m249");
+	UTIL_PrecacheOtherWeapon("weapon_mg36"); //new weapon
 	UTIL_PrecacheOther("ammo_556natobox");
 
 	UTIL_PrecacheOtherWeapon("weapon_m4a1");
@@ -867,6 +869,7 @@ bool CBasePlayerWeapon::HasSecondaryAttack()
 	case WEAPON_P90:
 	case WEAPON_C4:
 	case WEAPON_GALIL:
+	case WEAPON_MG36: //new weapon
 		return false;
 	default:
 		break;
@@ -2417,6 +2420,7 @@ char *CArmoury::m_ItemModels[] = {
 	"models/w_kevlar.mdl",
 	"models/w_assault.mdl",
 	"models/w_smokegrenade.mdl",
+	"models/w_mg36.mdl", //new weapon
 
 #ifdef REGAMEDLL_ADD
 	"models/w_shield.mdl",
@@ -2591,6 +2595,7 @@ struct ArmouryItemStruct
 	{ "weapon_m3",        "buckshot",   24, MAX_AMMO_BUCKSHOT   }, // ARMOURY_M3
 	{ "weapon_xm1014",    "buckshot",   24, MAX_AMMO_BUCKSHOT   }, // ARMOURY_XM1014
 	{ "weapon_m249",      "556NatoBox", 60, MAX_AMMO_556NATOBOX }, // ARMOURY_M249
+	{ "weapon_mg36",      "556NatoBox", 60, MAX_AMMO_556NATOBOX }, // ARMOURY_M249 //new weapon
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_FLASHBANG
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_HEGRENADE
 	{ nullptr,            nullptr,      0,  0                   }, // ARMOURY_KEVLAR
@@ -2629,8 +2634,8 @@ void CArmoury::ArmouryTouch(CBaseEntity *pOther)
 		return;
 #endif
 
-	// primary weapons
-	if (m_iCount > 0 && (m_iItem <= ARMOURY_M249
+	// primary weapons //new weapon
+	if (m_iCount > 0 && (m_iItem <= ARMOURY_MG36
 #ifdef REGAMEDLL_ADD
 		|| (m_iItem >= ARMOURY_FAMAS && m_iItem <= ARMOURY_UMP45)
 #endif
