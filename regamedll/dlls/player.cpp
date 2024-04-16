@@ -245,6 +245,12 @@ void CBasePlayer::SetPlayerModel(BOOL HasC4)
 				model = "spetsnaz";
 				break;
 			}
+		case MODEL_707: //new skin
+			if (AreRunningCZero())
+			{
+				model = "707";
+				break;
+			}
 		default:
 		{
 			if (IsBot())
@@ -280,6 +286,12 @@ void CBasePlayer::SetPlayerModel(BOOL HasC4)
 			if (AreRunningCZero())
 			{
 				model = "militia";
+				break;
+			}
+		case MODEL_RBC: //new skin
+			if (AreRunningCZero())
+			{
+				model = "rbc";
 				break;
 			}
 		default:
@@ -8380,6 +8392,13 @@ void CBasePlayer::__API_HOOK(SwitchTeam)()
 				szNewModel = "militia";
 				break;
 			}
+		case MODEL_707: //new skin
+			if (AreRunningCZero())
+			{
+				m_iModelName = MODEL_RBC;
+				szNewModel = "rbc";
+				break;
+			}
 		default:
 			if (m_iModelName == MODEL_GSG9 || !IsBot() || !TheBotProfiles->GetCustomSkinModelname(m_iModelName))
 			{
@@ -8415,6 +8434,14 @@ void CBasePlayer::__API_HOOK(SwitchTeam)()
 			{
 				m_iModelName = MODEL_SPETSNAZ;
 				szNewModel = "spetsnaz";
+				break;
+			}
+
+		case MODEL_RBC: //new skin
+			if (AreRunningCZero())
+			{
+				m_iModelName = MODEL_707;
+				szNewModel = "707";
 				break;
 			}
 		default:

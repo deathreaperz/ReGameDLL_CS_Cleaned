@@ -220,6 +220,8 @@ enum ModelName
 	MODEL_VIP,
 	MODEL_MILITIA,
 	MODEL_SPETSNAZ,
+	MODEL_707, //new skin
+	MODEL_RBC, //new skin
 	MODEL_AUTO
 };
 

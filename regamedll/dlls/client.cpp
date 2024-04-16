@@ -98,7 +98,9 @@ char *sPlayerModelFiles[] =
 	"models/player/terror/terror.mdl",
 	"models/player/urban/urban.mdl",
 	"models/player/spetsnaz/spetsnaz.mdl", // CZ
-	"models/player/militia/militia.mdl"    // CZ
+	"models/player/militia/militia.mdl",    // CZ
+	"models/player/707/707.mdl",    // CZ //new skin
+	"models/player/rbc/rbc.mdl"    // CZ //new skin
 };
 
 bool g_skipCareerInitialSpawn = false;
@@ -1629,6 +1631,13 @@ void EXT_FUNC __API_HOOK(HandleMenu_ChooseAppearance)(CBasePlayer *pPlayer, int 
 				appearance.model_name = "militia";
 				break;
 			}
+		case 6: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_RBC;
+				appearance.model_name = "rbc";
+				break;
+			}
 		default:
 			if (TheBotProfiles->GetCustomSkinModelname(slot) && pPlayer->IsBot())
 			{
@@ -1676,6 +1685,13 @@ void EXT_FUNC __API_HOOK(HandleMenu_ChooseAppearance)(CBasePlayer *pPlayer, int 
 			{
 				appearance.model_id = MODEL_SPETSNAZ;
 				appearance.model_name = "spetsnaz";
+				break;
+			}
+		case 6: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_707;
+				appearance.model_name = "707";
 				break;
 			}
 		default:

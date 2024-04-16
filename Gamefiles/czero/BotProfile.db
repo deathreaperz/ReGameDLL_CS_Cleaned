@@ -1,0 +1,1055 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+// Improved v1.5 by deathreaperz
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.3
+	AttackDelay = 0
+	Teamwork = 75
+	WeaponPreference = none
+	Cost = 0
+	Difficulty = NORMAL
+	VoicePitch = 100
+	Skin = 7
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Rifle
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = flashbang
+End
+
+Template RifleT
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = mp5
+	WeaponPreference = flashbang
+End
+
+Template Punch
+	WeaponPreference = aug
+	WeaponPreference = g3sg1
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = ump45
+	WeaponPreference = hegrenade
+End
+
+Template PunchT
+	WeaponPreference = g3sg1
+	WeaponPreference = aug
+	WeaponPreference = ak47
+	WeaponPreference = m4a1
+	WeaponPreference = galil
+	WeaponPreference = famas
+	WeaponPreference = ump45
+	WeaponPreference = hegrenade
+End
+
+Template Sniper
+	WeaponPreference = awp
+	WeaponPreference = scout
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = deagle
+	WeaponPreference = smokegrenade
+End
+
+Template AutomaticSniper
+	WeaponPreference = sg550
+	WeaponPreference = g3sg1
+	WeaponPreference = scout
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = deagle
+	WeaponPreference = smokegrenade
+End
+
+Template AutomaticSniperT
+	WeaponPreference = g3sg1
+	WeaponPreference = sg550
+	WeaponPreference = scout
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = deagle
+	WeaponPreference = smokegrenade
+End
+
+Template Power
+	WeaponPreference = m249
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = deagle
+	WeaponPreference = hegrenade
+End
+
+Template Shotgun
+	WeaponPreference = xm1014
+	WeaponPreference = m3
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = smokegrenade
+End
+
+Template Shield
+	WeaponPreference = shield
+	WeaponPreference = deagle
+	WeaponPreference = p228
+	WeaponPreference = usp
+	WeaponPreference = glock18
+	WeaponPreference = m4a1			// in case shield is disallowed
+	WeaponPreference = ak47
+	WeaponPreference = famas
+	WeaponPreference = galil
+	WeaponPreference = mp5
+	WeaponPreference = smokegrenade
+End
+
+Template Spray
+	WeaponPreference = p90
+	WeaponPreference = ump45
+	WeaponPreference = mp5
+	WeaponPreference = tmp
+	WeaponPreference = mac10
+	WeaponPreference = flashbang
+End
+
+Template Handgun
+	WeaponPreference = fiveseven
+	WeaponPreference = elite
+	WeaponPreference = deagle
+	WeaponPreference = p228
+	WeaponPreference = usp
+	WeaponPreference = glock18
+	WeaponPreference = smokegrenade
+	WeaponPreference = hegrenade
+	WeaponPreference = flashbang
+End
+
+Template HandgunT
+	WeaponPreference = elite
+	WeaponPreference = fiveseven
+	WeaponPreference = deagle
+	WeaponPreference = p228
+	WeaponPreference = usp
+	WeaponPreference = glock18
+	WeaponPreference = smokegrenade
+	WeaponPreference = hegrenade
+	WeaponPreference = flashbang
+End
+
+
+// skill templates
+
+Template Elite
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.1
+	AttackDelay = 0.2
+	Teamwork = 100
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 85
+	WeaponPreference = vesthelm
+	WeaponPreference = vest
+End
+
+Template Expert
+	Skill = 90
+	Aggression = 90
+	ReactionTime = 0.2
+	AttackDelay = 0.3
+	Teamwork = 93
+	Cost = 4
+	Difficulty = EXPERT
+	VoicePitch = 88
+	WeaponPreference = vesthelm
+	WeaponPreference = vest
+End
+
+Template VeryHard
+	Skill = 80
+	Aggression = 80
+	ReactionTime = 0.3
+	AttackDelay = 0.4
+	Teamwork = 88
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 92
+	WeaponPreference = vesthelm
+	WeaponPreference = vest
+End
+
+Template Hard
+	Skill = 70
+	Aggression = 70
+	ReactionTime = 0.3
+	AttackDelay = 0.5
+	Teamwork = 88
+	Cost = 3
+	Difficulty = HARD
+	VoicePitch = 94
+	WeaponPreference = vesthelm
+	WeaponPreference = vest
+End
+
+Template Tough
+	Skill = 60
+	Aggression = 60
+	ReactionTime = 0.4
+	AttackDelay = 0.6
+	Cost = 2
+	Difficulty = NORMAL+HARD
+	VoicePitch = 96
+	WeaponPreference = vest
+End
+
+Template Normal
+	Skill = 50
+	Aggression = 50
+	ReactionTime = 0.4
+	AttackDelay = 0.7
+	Cost = 2
+	Difficulty = NORMAL
+	WeaponPreference = vest
+End
+
+Template Fair
+	Skill = 40
+	Aggression = 40
+	ReactionTime = 0.5
+	AttackDelay = 0.8
+	Teamwork = 63
+	Cost = 1
+	Difficulty = EASY+NORMAL
+	VoicePitch = 105
+End
+
+Template Easy
+	Skill = 30
+	Aggression = 30
+	ReactionTime = 0.5
+	AttackDelay = 0.9
+	Teamwork = 63
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+End
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+Elite+Rifle Cliffe
+	VoicePitch = 95
+	Team = CT
+End
+
+Elite+Spray Minh
+	VoicePitch = 105
+End
+
+Elite+Shotgun Crusher
+	VoicePitch = 84
+End
+
+Elite+Punch Pheonix
+	VoicePitch = 110
+	Team = CT
+End
+
+Elite+Power Rock
+	VoicePitch = 80
+End
+
+Elite+PunchT Shark
+	VoicePitch = 90
+	Team = T
+End
+
+Elite+Rifle Wolf
+	VoicePitch = 98
+	Team = CT
+End
+
+Elite+RifleT Gunner
+	VoicePitch = 96
+	Team = T
+End
+
+Elite+Sniper Zed
+	VoicePitch = 105
+End
+
+Elite+Sniper Ned
+	VoicePitch = 90
+End
+
+Elite+RifleT Steel
+	VoicePitch = 84
+	Team = T
+End
+
+Elite+PunchT Stone
+	VoicePitch = 86
+	Team = T
+End
+
+Elite+Handgun Astley
+	VoicePitch = 102
+	Team = CT
+End
+
+Elite+HandgunT Robert
+	VoicePitch = 96
+	Team = T
+End
+
+Elite+Shield Vincent
+	VoicePitch = 95
+	Team = CT
+End
+
+Elite Theo
+	VoicePitch = 110
+End
+
+Elite Courtney
+	VoicePitch = 93
+End
+
+Elite Rafael
+	VoicePitch = 120
+End
+
+Elite Barnaby
+	VoicePitch = 83
+End
+
+//----------------------------------------
+
+Expert+RifleT Arnold
+	VoicePitch = 85
+	Team = T
+End
+
+Expert+Rifle Brett
+	VoicePitch = 100
+	Team = CT
+End
+
+Expert+Punch Kurt
+	VoicePitch = 95
+	Team = CT
+End
+
+Expert+Sniper Kyle
+	Cost = 5
+	VoicePitch = 115
+End
+
+Expert+Shotgun Moe
+	VoicePitch = 87
+End
+
+Expert+Rifle Quade
+	VoicePitch = 91
+	Team = CT
+End
+
+Expert+Rifle Quintin
+	VoicePitch = 101
+	Team = CT
+End
+
+Expert Ringo
+	VoicePitch = 112
+End
+
+Expert+PunchT Rip
+	VoicePitch = 99
+	Team = T
+End
+
+Expert+Rifle Zach
+	VoicePitch = 100
+	Team = CT
+End
+
+Expert+AutomaticSniper Bourne
+	Skin = 4
+	VoicePitch = 96
+	Team = CT
+End
+
+Expert+AutomaticSniperT Clayton
+	Skin = 2
+	VoicePitch = 105
+	Team = T
+End
+
+Expert+Shield Iron
+	Skin = 3
+	VoicePitch = 86
+	Team = CT
+End
+
+Expert Bruce
+	VoicePitch = 75
+End
+
+Expert Gilbert
+	VoicePitch = 88
+End
+
+Expert Ali
+	VoicePitch = 105
+End
+
+Expert Hamzah
+	VoicePitch = 70
+End
+
+//----------------------------------------
+
+VeryHard+Power Cory
+	Skin = 1
+	VoicePitch = 110
+End
+
+VeryHard+Sniper Quinn
+	Skin = 3
+	VoicePitch = 93
+End
+
+VeryHard+Rifle Seth
+	Skin = 2
+	VoicePitch = 100
+	Team = CT
+End
+
+VeryHard+RifleT Vinny
+	Skin = 4
+	VoicePitch = 86
+	Team = T
+End
+
+
+//----------------------------------------
+
+Hard+Rifle Chad
+	Skin = 1
+	VoicePitch = 95
+	Team = CT
+End
+
+Hard+RifleT Chet
+	Skin = 2
+	VoicePitch = 90
+	Team = T
+End
+
+Hard+Spray Gabe
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Shotgun Hank
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+RifleT Ivan
+	Skin = 2
+	VoicePitch = 96
+	Team = T
+End
+
+Hard+Punch Jim
+	Skin = 4
+	VoicePitch = 103
+	Team = CT
+End
+
+Hard+PunchT Joe
+	Skin = 1
+	VoicePitch = 105
+	Team = T
+End
+
+Hard+Rifle John
+	Skin = 2
+	VoicePitch = 97
+	Team = CT
+End
+
+Hard+Rifle Tony
+	Skin = 4
+	VoicePitch = 84
+	Team = CT
+End
+
+Hard+PunchT Tyler
+	Skin = 1
+	VoicePitch = 90
+	Team = T
+End
+
+Hard+Rifle Victor
+	Skin = 2
+	VoicePitch = 98
+	Team = CT
+End
+
+Hard+Sniper Vladimir
+	Skin = 3
+	VoicePitch = 110
+End
+
+Hard+Spray Zane
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Rifle Zim
+	Skin = 2
+	VoicePitch = 110
+	Team = CT
+End
+
+Hard+AutomaticSniper Lance
+	Skin = 4
+	VoicePitch = 96
+	Team = CT
+End
+
+Hard+AutomaticSniperT Sharp
+	Skin = 2
+	VoicePitch = 105
+	Team = T
+End
+
+Hard+Shield Bulk
+	Skin = 3
+	VoicePitch = 86
+	Team = CT
+End
+
+//----------------------------------------
+
+Tough+Sniper Adrian
+	Skin = 3
+	VoicePitch = 120
+End
+
+Tough+Rifle Brad
+	Skin = 1
+	VoicePitch = 100
+	Team = CT
+End
+
+Tough+Rifle Connor
+	Skin = 2
+	VoicePitch = 104
+	Team = CT
+End
+
+Tough+RifleT Dave
+	Skin = 4
+	VoicePitch = 98
+	Team = T
+End
+
+Tough Dan
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Rifle Derek
+	Skin = 2
+	VoicePitch = 102
+	Team = CT
+End
+
+Tough+Shotgun Don
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+Rifle Eric
+	Skin = 1
+	VoicePitch = 95
+	Team = CT
+End
+
+Tough+RifleT Erik
+	Skin = 2
+	VoicePitch = 110
+	Team = T
+End
+
+Tough+Rifle Finn
+	Skin = 4
+	VoicePitch = 112
+	Team = CT
+End
+
+Tough Jeff
+	Skin = 1
+	VoicePitch = 90
+End
+
+Tough+Rifle Kevin
+	Skin = 2
+	VoicePitch = 115
+	Team = CT
+End
+
+Tough+RifleT Reed
+	Skin = 4
+	VoicePitch = 107
+	Team = T
+End
+
+Tough+Rifle Rick
+	Skin = 2
+	VoicePitch = 102
+	Team = CT
+End
+
+Tough Ted
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+Rifle Troy
+	Skin = 2
+	VoicePitch = 100
+	Team = CT
+End
+
+Tough+RifleT Wade
+	Skin = 4
+	VoicePitch = 95
+	Team = T
+End
+
+Tough+Rifle Wayne
+	Skin = 1
+	VoicePitch = 86
+	Team = CT
+End
+
+Tough+RifleT Xander
+	Skin = 2
+	VoicePitch = 100
+	Team = T
+End
+
+Tough+Rifle Xavier
+	Skin = 4
+	VoicePitch = 95
+	Team = CT
+End
+
+Tough+AutomaticSniper Clint
+	Skin = 4
+	VoicePitch = 96
+	Team = CT
+End
+
+Tough+AutomaticSniperT Claude
+	Skin = 2
+	VoicePitch = 105
+	Team = T
+End
+
+//----------------------------------------
+
+Normal+Rifle Adam
+	Skin = 1
+	VoicePitch = 105
+	Team = CT
+End
+
+Normal+PunchT Andy
+	Skin = 2
+	VoicePitch = 90
+	Team = T
+End
+
+Normal Chris
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal Colin
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+Shield Dennis
+	Skin = 1
+	VoicePitch = 104
+	Team = CT
+End
+
+Normal Doug
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal Gary
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal Grant
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal Greg
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Sniper Ian
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal Jerry
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal Jon
+	Skin = 1
+	VoicePitch = 96
+End
+
+Normal Keith
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal Mark
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal Matt
+	Skin = 1
+	VoicePitch = 95
+End
+
+Normal+RifleT Mike
+	Skin = 2
+	VoicePitch = 100
+	Team = T
+End
+
+Normal Nate
+	Skin = 4
+	VoicePitch = 99
+End
+
+Normal Paul
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal Scott
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal Steve
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal Tom
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal Yahn
+	Skin = 4
+	VoicePitch = 92
+End
+
+//----------------------------------------
+
+Fair Alfred
+	VoicePitch = 110
+End
+
+Fair Bill
+	VoicePitch = 100
+End
+
+Fair Brandon
+	VoicePitch = 99
+End
+
+Fair+Spray Calvin
+	VoicePitch = 120
+End
+
+Fair Dean
+	VoicePitch = 111
+End
+
+Fair Dustin
+	VoicePitch = 98
+End
+
+Fair Ethan
+	VoicePitch = 112
+End
+
+Fair Harold
+	VoicePitch = 90
+End
+
+Fair Henry
+	VoicePitch = 120
+End
+
+Fair Irving
+	VoicePitch = 118
+End
+
+Fair Jason
+	VoicePitch = 116
+End
+
+Fair Josh
+	VoicePitch = 114
+End
+
+Fair Martin
+	VoicePitch = 110
+End
+
+Fair Nick
+	VoicePitch = 98
+End
+
+Fair Norm
+	VoicePitch = 92
+End
+
+Fair Orin
+	VoicePitch = 113
+End
+
+Fair Pat
+	VoicePitch = 114
+End
+
+Fair Perry
+	VoicePitch = 115
+End
+
+Fair Ron
+	VoicePitch = 100
+End
+
+Fair Shawn
+	VoicePitch = 102
+End
+
+Fair Tim
+	VoicePitch = 98
+End
+
+Fair Will
+	VoicePitch = 96
+End
+
+Fair Wyatt
+	VoicePitch = 94
+End
+
+//----------------------------------------
+
+Easy Albert
+	VoicePitch = 100
+End
+
+Easy Allen
+	VoicePitch = 110
+End
+
+Easy Bert
+	VoicePitch = 120
+End
+
+Easy Bob
+	VoicePitch = 99
+End
+
+Easy Cecil
+	VoicePitch = 120
+End
+
+Easy Clarence
+	VoicePitch = 125
+End
+
+Easy Elliot
+	VoicePitch = 110
+End
+
+Easy Elmer
+	VoicePitch = 100
+End
+
+Easy Ernie
+	VoicePitch = 112
+End
+
+Easy Eugene
+	VoicePitch = 121
+End
+
+Easy Fergus
+	VoicePitch = 99
+End
+
+Easy Ferris
+	VoicePitch = 119
+End
+
+Easy Frank
+	VoicePitch = 118
+End
+
+Easy Frasier
+	VoicePitch = 117
+End
+
+Easy Fred
+	VoicePitch = 116
+End
+
+Easy George
+	VoicePitch = 115
+End
+
+Easy Graham
+	VoicePitch = 114
+End
+
+Easy Harvey
+	VoicePitch = 112
+End
+
+Easy Irwin
+	VoicePitch = 111
+End
+
+Easy Lester
+	VoicePitch = 110
+End
+
+Easy Marvin
+	VoicePitch = 109
+End
+
+Easy Neil
+	VoicePitch = 108
+End
+
+Easy Niles
+	VoicePitch = 122
+End
+
+Easy Oliver
+	VoicePitch = 120
+End
+
+Easy Opie
+	VoicePitch = 125
+End
+
+Easy Toby
+	VoicePitch = 92
+End
+
+Easy Ulric
+	VoicePitch = 100
+End
+
+Easy Ulysses
+	VoicePitch = 102
+End
+
+Easy Uri
+	VoicePitch = 104
+End
+
+Easy Waldo
+	VoicePitch = 108
+End
+
+Easy Wally
+	VoicePitch = 95
+End
+
+Easy Walt
+	VoicePitch = 100
+End
+
+Easy Wesley
+	VoicePitch = 120
+End
+
+Easy Yanni
+	VoicePitch = 112
+End
+
+Easy Yogi
+	VoicePitch = 99
+End
+
+Easy Yuri
+	VoicePitch = 110
+End

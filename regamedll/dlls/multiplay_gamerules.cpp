@@ -2279,6 +2279,13 @@ void CHalfLifeMultiplay::ResetCurrentVIP()
 			m_pVIP->SetClientUserInfoModel(infobuffer, "spetsnaz");
 			break;
 		}
+	case 5: //new skin
+		if (AreRunningCZero())
+		{
+			m_pVIP->m_iModelName = MODEL_707;
+			m_pVIP->SetClientUserInfoModel(infobuffer, "707");
+			break;
+		}
 	default:
 		m_pVIP->m_iModelName = MODEL_URBAN;
 		m_pVIP->SetClientUserInfoModel(infobuffer, "urban");
