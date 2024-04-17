@@ -1345,11 +1345,11 @@ const int MG36_ACCURACY_DIVISOR = 190;
 enum mg36_e
 {
 	MG36_IDLE1,
+	MG36_RELOAD,
+	MG36_DRAW,
 	MG36_SHOOT1,
 	MG36_SHOOT2,
 	MG36_SHOOT3,
-	MG36_RELOAD,
-	MG36_DRAW,
 };
 
 class CMG36 : public CBasePlayerWeapon

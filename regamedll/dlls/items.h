@@ -76,6 +76,9 @@ enum ItemID
 	ITEM_AK47,
 	ITEM_KNIFE,
 	ITEM_P90,
+	//new weapon starts here
+	ITEM_MG36,
+	//new weapon ends here
 	ITEM_NVG,
 	ITEM_DEFUSEKIT,
 	ITEM_KEVLAR,
@@ -84,8 +87,7 @@ enum ItemID
 	ITEM_SODACAN,
 	ITEM_HEALTHKIT,
 	ITEM_ANTIDOTE,
-	ITEM_BATTERY,
-	ITEM_MG36 //new weapon
+	ITEM_BATTERY
 };
 
 class CItem: public CBaseEntity

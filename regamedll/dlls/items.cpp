@@ -32,6 +32,9 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_AK47,          "weapon_ak47"),
 	DEFINE_ITEMINFO(ITEM_KNIFE,         "weapon_knife"),
 	DEFINE_ITEMINFO(ITEM_P90,           "weapon_p90"),
+	//new weapon starts here
+	DEFINE_ITEMINFO(ITEM_MG36,       "weapon_mg36"),
+	//new weapon ends here
 	DEFINE_ITEMINFO(ITEM_NVG,           ""),
 	DEFINE_ITEMINFO(ITEM_DEFUSEKIT,     "item_thighpack"),
 	DEFINE_ITEMINFO(ITEM_KEVLAR,        "item_kevlar"),
@@ -40,8 +43,6 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_HEALTHKIT,     "item_healthkit"),
 	DEFINE_ITEMINFO(ITEM_ANTIDOTE,      "item_antidote"),
 	DEFINE_ITEMINFO(ITEM_BATTERY,       "item_battery"),
-	//new weapon starts here
-	DEFINE_ITEMINFO(ITEM_MG36,       "weapon_mg36"),
 };
 
 LINK_ENTITY_TO_CLASS(world_items, CWorldItem, CCSWorldItem)
@@ -547,6 +548,7 @@ ItemID GetItemIdByArmoury(ArmouryItemPack armoury)
 	}
 }
 
+// enum weapon and enum item must be in the same order
 ItemID GetItemIdByWeaponId(int weaponId)
 {
 	switch (static_cast<WeaponIdType>(weaponId))
@@ -581,7 +583,9 @@ ItemID GetItemIdByWeaponId(int weaponId)
 	case WEAPON_SG550: return ITEM_SG550;
 	case WEAPON_GALIL: return ITEM_GALIL;
 	case WEAPON_UMP45: return ITEM_UMP45;
-	case WEAPON_MG36: return ITEM_MG36; //new weapon
+	//new weapon starts here
+	case WEAPON_MG36: return ITEM_MG36;
+	//new weapon ends here
 	default: return ITEM_NONE;
 	}
 }

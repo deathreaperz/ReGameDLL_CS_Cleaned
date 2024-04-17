@@ -48,7 +48,7 @@ int CMG36::GetItemInfo(ItemInfo *p)
 	p->iMaxAmmo2 = -1;
 	p->iMaxClip = MG36_MAX_CLIP;
 	p->iSlot = 0; //primary
-	p->iPosition = 20; //idk how to determine this
+	p->iPosition = 20; //alphabetically based on iSlot Category for all weapons
 	p->iId = m_iId = WEAPON_MG36;
 	p->iFlags = 0; //special conditions
 	p->iWeight = MG36_WEIGHT;
@@ -62,7 +62,18 @@ BOOL CMG36::Deploy()
 	m_iShotsFired = 0;
 	iShellOn = 1;
 
-	return DefaultDeploy("models/v_mg36.mdl", "models/p_mg36.mdl", MG36_DRAW, "m249", UseDecrement() != FALSE); //(first person model, player model, first person sequence, player sequence, use decrement)
+	return DefaultDeploy("models/v_mg36.mdl", "models/p_mg36.mdl", MG36_DRAW, "m249", UseDecrement() != FALSE);
+	//(first person model, player model, first person sequence, player sequence, use decrement)
+}
+
+void CMG36::SecondaryAttack() //can zoom
+{
+	if (m_pPlayer->m_iFOV == DEFAULT_FOV)
+		m_pPlayer->pev->fov = m_pPlayer->m_iFOV = 55;
+	else
+		m_pPlayer->pev->fov = m_pPlayer->m_iFOV = 90;
+
+	m_flNextSecondaryAttack = UTIL_WeaponTimeBase() + 0.3f;
 }
 
 void CMG36::PrimaryAttack()
@@ -165,17 +176,6 @@ void CMG36::MG36Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim)
 		KickBack(0.7, 0.25, 0.2, 0.03, 3.65, 2.9, 8);
 	}
 }
-
-void CMG36::SecondaryAttack() //can zoom
-{
-	if (m_pPlayer->m_iFOV == DEFAULT_FOV)
-		m_pPlayer->pev->fov = m_pPlayer->m_iFOV = 55;
-	else
-		m_pPlayer->pev->fov = m_pPlayer->m_iFOV = 90;
-
-	m_flNextSecondaryAttack = UTIL_WeaponTimeBase() + 0.3f;
-}
-
 
 void CMG36::Reload()
 {
