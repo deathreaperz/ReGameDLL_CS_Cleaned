@@ -352,7 +352,8 @@ AS_T_BuyMachineGun
 \yBuy Machine Gun\R$   Cost
 (Primary weapon)
 
-\d1. ES M249 Para\y\R5750
+\d1. ES HK MG3G\y\R3500 //new weapon
+\d2. ES M249 Para\y\R5750
 
 \w0. Exit
 }
@@ -362,7 +363,8 @@ BuyMachineGun
 \yBuy Machine Gun\R$   Cost
 (Primary weapon)
 
-\w1. ES M249 Para\y\R5750
+\w1. ES HK MG3G\y\R3500 //new weapon
+\w2. ES M249 Para\y\R5750
 
 \w0. Exit
 }
@@ -533,6 +535,11 @@ UMP45
 }
 
 // mg
+MG36 //new weapon
+{
+#Cstrike_TitlesTXT_MG36
+}
+
 M249
 {
 #Cstrike_TitlesTXT_M249
@@ -638,6 +645,11 @@ KMUMP45
 }
 
 // mg short name
+ESMG36 //new weapon
+{
+#Cstrike_TitlesTXT_ESMG36
+}
+
 ESM249
 {
 #Cstrike_TitlesTXT_ESM249

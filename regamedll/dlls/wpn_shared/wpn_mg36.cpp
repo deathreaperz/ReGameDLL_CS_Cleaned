@@ -62,7 +62,7 @@ BOOL CMG36::Deploy()
 	m_iShotsFired = 0;
 	iShellOn = 1;
 
-	return DefaultDeploy("models/v_mg36.mdl", "models/p_mg36.mdl", MG36_DRAW, "mg36", UseDecrement() != FALSE);
+	return DefaultDeploy("models/v_mg36.mdl", "models/p_mg36.mdl", MG36_DRAW, "m249", UseDecrement() != FALSE); //(first person model, player model, first person sequence, player sequence, use decrement)
 }
 
 void CMG36::PrimaryAttack()
