@@ -63,12 +63,12 @@ float GetBaseAccuracy(WeaponIdType id)
 	case WEAPON_M249:
 	case WEAPON_P90:
 	case WEAPON_TMP:
+	case WEAPON_MG36: //new weapon
 		return 0.2f;
 	case WEAPON_MAC10:
 		return 0.15f;
 	case WEAPON_UMP45:
 	case WEAPON_MP5N:
-	case WEAPON_MG36: //new weapon
 		return 0.0f;
 	}
 

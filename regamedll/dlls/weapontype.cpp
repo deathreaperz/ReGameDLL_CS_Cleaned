@@ -40,7 +40,7 @@ WeaponStruct g_weaponStruct[MAX_WEAPONS] =
 	{ 0, 0, 0, 0, 0 },
 
 	//new weapon starts here
-	{ WEAPON_MG36,      MG36_PRICE,         TERRORIST | CT,   AUTOBUYCLASS_PRIMARY,   AMMO_556MM_PRICE    },
+	{ WEAPON_MG36,      MG36_PRICE,         TERRORIST|CT,   AUTOBUYCLASS_PRIMARY,   AMMO_556MM_PRICE    },
 };
 
 AutoBuyInfoStruct g_autoBuyInfo[] =
@@ -123,7 +123,7 @@ WeaponAliasInfo g_weaponAliasInfo[] =
 	{ "elite",      WEAPON_ELITE        },
 	{ "fiveseven",  WEAPON_FIVESEVEN    },
 	{ "mp5navy",    WEAPON_MP5N         },
-	{ "mg36",    WEAPON_MG36         }, //new weapon
+	{ "mg36",       WEAPON_MG36         }, //new weapon
 	{ nullptr,      WEAPON_NONE         },
 };
 
@@ -221,7 +221,7 @@ WeaponClassAliasInfo g_weaponClassAliasInfo[] =
 	{ "shotgun",    WEAPONCLASS_SHOTGUN         },
 	{ "rifle",      WEAPONCLASS_RIFLE           },
 	{ "sniper",     WEAPONCLASS_SNIPERRIFLE     },
-	{ "mg36",     WEAPONCLASS_MACHINEGUN     }, //new weapon
+	{ "mg36",       WEAPONCLASS_MACHINEGUN      }, //new weapon
 	{ "none",       WEAPONCLASS_NONE            },
 	{ nullptr,      WEAPONCLASS_NONE            },
 };
@@ -679,8 +679,8 @@ bool CanBuyWeaponByMaptype(int playerTeam, WeaponIdType weaponID, bool useAssasi
 		case WEAPON_TMP:
 		case WEAPON_DEAGLE:
 		case WEAPON_P90:
-		case WEAPON_SHIELDGUN:
 		case WEAPON_MG36: //new weapon
+		case WEAPON_SHIELDGUN:
 			return true;
 		default:
 			return false;

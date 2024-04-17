@@ -1332,16 +1332,19 @@ private:
 };
 
 //new weapon settings
-const float MG36_MAX_SPEED = 210.0f;
+const float MG36_MAX_SPEED = 230.0f;
+const float MG36_MAX_SPEED_ZOOM = 200.0f;
 const float MG36_DAMAGE = 25.0f;
-const float MG36_RANGE_MODIFER = 0.95f;
+const float MG36_RANGE_MODIFER = 0.955f;
 const float MG36_RELOAD_TIME = 4.0f;
 #ifdef REGAMEDLL_FIXES
-const float MG36_ACCURACY_DIVISOR = 190.0f;
+const float MG36_ACCURACY_DIVISOR = 220.0f;
 #else
-const int MG36_ACCURACY_DIVISOR = 190;
+const int MG36_ACCURACY_DIVISOR = 220;
 #endif
 
+//ANOTHER MAIN PROBLEM, THE ENUMS ARE NOT IN ORDER WHILE INGAME
+//original enum
 enum mg36_e
 {
 	MG36_IDLE1,
@@ -1352,6 +1355,17 @@ enum mg36_e
 	MG36_SHOOT3,
 };
 
+// //if using WEAPON_SG552
+//enum mg36_e
+//{
+//	  MG36_IDLE1,
+//	  MG36_SHOOT1,
+//	  MG36_SHOOT2,
+//	  MG36_SHOOT3,
+//	  MG36_RELOAD,
+//	  MG36_DRAW,
+//};
+
 class CMG36 : public CBasePlayerWeapon
 {
 public:
@@ -1359,7 +1373,7 @@ public:
 	virtual void Precache();
 	virtual int GetItemInfo(ItemInfo* p);
 	virtual BOOL Deploy();
-	virtual float GetMaxSpeed() { return MG36_MAX_SPEED; }
+	virtual float GetMaxSpeed();
 	virtual int iItemSlot() { return PRIMARY_WEAPON_SLOT; }
 	virtual void PrimaryAttack();
 	virtual void SecondaryAttack();

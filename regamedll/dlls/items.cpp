@@ -33,7 +33,7 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_KNIFE,         "weapon_knife"),
 	DEFINE_ITEMINFO(ITEM_P90,           "weapon_p90"),
 	//new weapon starts here
-	DEFINE_ITEMINFO(ITEM_MG36,       "weapon_mg36"),
+	DEFINE_ITEMINFO(ITEM_MG36,          "weapon_mg36"),
 	//new weapon ends here
 	DEFINE_ITEMINFO(ITEM_NVG,           ""),
 	DEFINE_ITEMINFO(ITEM_DEFUSEKIT,     "item_thighpack"),
