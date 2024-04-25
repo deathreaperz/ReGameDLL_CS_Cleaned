@@ -561,7 +561,7 @@
     <ClCompile Include="..\public\tier0\assert_dialog.cpp">
       <Filter>public\tier0</Filter>
     </ClCompile>
-    <ClCompile Include="..\dlls\wpn_shared\wpn_mg36.cpp">
+    <ClCompile Include="..\dlls\wpn_shared\wpn_m60.cpp">
       <Filter>dlls\wpn_shared</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1066,6 +1066,9 @@
     </ClInclude>
     <ClInclude Include="..\public\tier0\resource.h">
       <Filter>public\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\event_args.h">
+      <Filter>dlls</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -51,10 +51,10 @@
 		"tabPosition"		"0"
 	}
 
-	"mg36"
+	"m60"
 	{
 		"ControlName"		"MouseOverPanelButton"
-		"fieldName"		"mg36"
+		"fieldName"		"m60"
 		"xpos"			"76"
 		"ypos"			"116"
 		"wide"			"148"
@@ -64,12 +64,12 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
-		"labelText"		"#Cstrike_MG36"
+		"labelText"		"#Cstrike_M60"
 		"textAlignment"		"west"
 		"dulltext"		"0"
 		"brighttext"		"0"
-		"command"		"mg36"
-		"cost"			"3500"
+		"command"		"m60"
+		"cost"			"4700"
 	}
 
 	"m249"

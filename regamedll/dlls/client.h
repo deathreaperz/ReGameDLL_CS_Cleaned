@@ -55,7 +55,7 @@ enum BuyItemMenuSlot
 };
 
 #define CS_NUM_SKIN				4
-#define CZ_NUM_SKIN				6 //added new skin
+#define CZ_NUM_SKIN				9 //added new skin
 
 #define FIELD_ORIGIN0			0
 #define FIELD_ORIGIN1			1

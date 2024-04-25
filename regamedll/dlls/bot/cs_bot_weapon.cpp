@@ -375,7 +375,7 @@ bool CCSBot::IsUsingMachinegun() const
 	if (!pCurrentWeapon)
 		return false;
 
-	if (pCurrentWeapon->m_iId == WEAPON_M249 || pCurrentWeapon->m_iId == WEAPON_MG36) //new weapon
+	if (pCurrentWeapon->m_iId == WEAPON_M249 || pCurrentWeapon->m_iId == WEAPON_M60) //new weapon
 		return true;
 
 	return false;

@@ -33,7 +33,7 @@ ItemInfo itemInfo[] = {
 	DEFINE_ITEMINFO(ITEM_KNIFE,         "weapon_knife"),
 	DEFINE_ITEMINFO(ITEM_P90,           "weapon_p90"),
 	//new weapon starts here
-	DEFINE_ITEMINFO(ITEM_MG36,          "weapon_mg36"),
+	DEFINE_ITEMINFO(ITEM_M60,          "weapon_m60"),
 	//new weapon ends here
 	DEFINE_ITEMINFO(ITEM_NVG,           ""),
 	DEFINE_ITEMINFO(ITEM_DEFUSEKIT,     "item_thighpack"),
@@ -543,7 +543,7 @@ ItemID GetItemIdByArmoury(ArmouryItemPack armoury)
 	case ARMOURY_SG550: return ITEM_SG550;
 	case ARMOURY_GALIL: return ITEM_GALIL;
 	case ARMOURY_UMP45: return ITEM_UMP45;
-	case ARMOURY_MG36: return ITEM_MG36; //new weapon
+	case ARMOURY_M60: return ITEM_M60; //new weapon
 	default: return ITEM_NONE;
 	}
 }
@@ -584,7 +584,7 @@ ItemID GetItemIdByWeaponId(int weaponId)
 	case WEAPON_GALIL: return ITEM_GALIL;
 	case WEAPON_UMP45: return ITEM_UMP45;
 	//new weapon starts here
-	case WEAPON_MG36: return ITEM_MG36;
+	case WEAPON_M60: return ITEM_M60;
 	//new weapon ends here
 	default: return ITEM_NONE;
 	}

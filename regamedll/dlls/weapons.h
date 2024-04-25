@@ -108,7 +108,7 @@ enum ArmouryItemPack
 	ARMOURY_FIVESEVEN,
 	ARMOURY_P228,
 	ARMOURY_DEAGLE,
-	ARMOURY_MG36, //new weapon
+	ARMOURY_M60, //new weapon
 };
 
 struct ItemInfo
@@ -1331,72 +1331,6 @@ private:
 	unsigned short m_usFireM249;
 };
 
-//new weapon settings
-const float MG36_MAX_SPEED = 230.0f;
-const float MG36_MAX_SPEED_ZOOM = 200.0f;
-const float MG36_DAMAGE = 25.0f;
-const float MG36_RANGE_MODIFER = 0.955f;
-const float MG36_RELOAD_TIME = 4.0f;
-#ifdef REGAMEDLL_FIXES
-const float MG36_ACCURACY_DIVISOR = 220.0f;
-#else
-const int MG36_ACCURACY_DIVISOR = 220;
-#endif
-
-//ANOTHER MAIN PROBLEM, THE ENUMS ARE NOT IN ORDER WHILE INGAME
-//original enum
-enum mg36_e
-{
-	MG36_IDLE1,
-	MG36_RELOAD,
-	MG36_DRAW,
-	MG36_SHOOT1,
-	MG36_SHOOT2,
-	MG36_SHOOT3,
-};
-
-// //if using WEAPON_SG552
-//enum mg36_e
-//{
-//	  MG36_IDLE1,
-//	  MG36_SHOOT1,
-//	  MG36_SHOOT2,
-//	  MG36_SHOOT3,
-//	  MG36_RELOAD,
-//	  MG36_DRAW,
-//};
-
-class CMG36 : public CBasePlayerWeapon
-{
-public:
-	virtual void Spawn();
-	virtual void Precache();
-	virtual int GetItemInfo(ItemInfo* p);
-	virtual BOOL Deploy();
-	virtual float GetMaxSpeed();
-	virtual int iItemSlot() { return PRIMARY_WEAPON_SLOT; }
-	virtual void PrimaryAttack();
-	virtual void SecondaryAttack();
-	virtual void Reload();
-	virtual void WeaponIdle();
-	virtual BOOL UseDecrement()
-	{
-#ifdef CLIENT_WEAPONS
-		return TRUE;
-#else
-		return FALSE;
-#endif
-	}
-
-public:
-	void MG36Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim);
-
-	int m_iShell;
-	int iShellOn;
-
-private:
-	unsigned short m_usFireMG36;
-};
 
 const float M3_MAX_SPEED   = 230.0f;
 const float M3_DAMAGE      = 20.0f;
@@ -1562,6 +1496,57 @@ public:
 private:
 	unsigned short m_usFireMAC10;
 };
+
+//new weapon settings
+const float M60_MAX_SPEED = 220.0f;
+const float M60_DAMAGE = 36.0f;
+const float M60_RANGE_MODIFER = 0.97f;
+const float M60_RELOAD_TIME = 5.8f;
+#ifdef REGAMEDLL_FIXES
+const float M60_ACCURACY_DIVISOR = 190.0f;
+#else
+const int M60_ACCURACY_DIVISOR = 190;
+#endif
+
+enum M60_e
+{
+	M60_IDLE1,
+	M60_SHOOT1,
+	M60_SHOOT2,
+	M60_RELOAD,
+	M60_DRAW,
+};
+
+class CM60 : public CBasePlayerWeapon
+{
+public:
+	virtual void Spawn();
+	virtual void Precache();
+	virtual int GetItemInfo(ItemInfo* p);
+	virtual BOOL Deploy();
+	virtual float GetMaxSpeed() { return M60_MAX_SPEED; }
+	virtual int iItemSlot() { return PRIMARY_WEAPON_SLOT; }
+	virtual void PrimaryAttack();
+	virtual void Reload();
+	virtual void WeaponIdle();
+	virtual BOOL UseDecrement()
+	{
+#ifdef CLIENT_WEAPONS
+		return TRUE;
+#else
+		return FALSE;
+#endif
+	}
+
+public:
+	void M60Fire(float flSpread, float flCycleTime, BOOL fUseAutoAim);
+
+	int m_iShell;
+	int iShellOn;
+
+private:
+	unsigned short m_usFireM60;
+	};
 
 
 const float P228_MAX_SPEED     = 250.0f;

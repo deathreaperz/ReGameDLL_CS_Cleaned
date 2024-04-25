@@ -88,7 +88,7 @@ item_healthkit			320 320hud2	68	52	20	20
 item_longjump			320 320hud2	88	52	20	20
 radar				320 radar320 0  0   64  64
 
-d_mg36				320 640hudc	172	160	48	16
+d_m60				320 640hudc	172	48	48	16
 
 //===========================================
 
@@ -195,4 +195,4 @@ hostage2			640 640hud7	96	213	48	25
 hostage1			640 640hud7	144	213	48	25
 radaropaque			640 radaropaque640	0	0	128	128
 
-d_mg36				640 640hudc	172	160	48	16
+d_m60				640 640hudc	172	48	48	16

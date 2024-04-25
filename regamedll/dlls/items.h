@@ -77,7 +77,7 @@ enum ItemID
 	ITEM_KNIFE,
 	ITEM_P90,
 	//new weapon starts here
-	ITEM_MG36,
+	ITEM_M60,
 	//new weapon ends here
 	ITEM_NVG,
 	ITEM_DEFUSEKIT,

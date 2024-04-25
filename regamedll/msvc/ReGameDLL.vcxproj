@@ -457,7 +457,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Play|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Play|Win32'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\dlls\wpn_shared\wpn_mg36.cpp">
+    <ClCompile Include="..\dlls\wpn_shared\wpn_m60.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Play|Win32'">false</ExcludedFromBuild>
@@ -604,6 +604,7 @@
     <ClInclude Include="..\common\crc.h" />
     <ClInclude Include="..\common\cvardef.h" />
     <ClInclude Include="..\common\entity_state.h" />
+    <ClInclude Include="..\common\event_args.h" />
     <ClInclude Include="..\common\event_flags.h" />
     <ClInclude Include="..\common\hltv.h" />
     <ClInclude Include="..\common\in_buttons.h" />

@@ -81,8 +81,11 @@ Terrorist_Select
 4. Guerilla Warfare
 5. Midwest Militia
 6. Red Beret Condottiere
+7. Asia Red Army
+8. National Liberation Campaign
+9. Vigilante Corps
 
-7. Auto-select
+10. Auto-select
 }
 
 CT_Select
@@ -95,8 +98,11 @@ CT_Select
 4. GIGN
 5. Spetsnaz
 6. 707
+7. SAF
+8. SAT
+9. SOZO
 
-7. Auto-select
+10. Auto-select
 }
 
 		Menu_Buy,
@@ -1612,6 +1618,26 @@ GIGN
 Title_gign
 {
 #Cstrike_TitlesTXT_Title_gign
+}
+
+Title_707
+{
+#Cstrike_TitlesTXT_Title_707
+}
+
+Title_saf
+{
+#Cstrike_TitlesTXT_Title_saf
+}
+
+Title_sat
+{
+#Cstrike_TitlesTXT_Title_sat
+}
+
+Title_sozo
+{
+#Cstrike_TitlesTXT_Title_sozo
 }
 
 Title_select_category_of_purchase

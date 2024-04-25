@@ -36,7 +36,7 @@ class CDummyWeaponClass:
 	public CM249, public CMAC10, public CMP5N, public CP90,
 	public CP228, public CSCOUT, public CSG550, public CSG552,
 	public CSmokeGrenade, public CTMP, public CUMP45, public CUSP,
-	public CXM1014
+	public CXM1014, public CM60
 {
 public:
 	virtual void Precache() {};
@@ -71,7 +71,7 @@ public:
 
 //new weapon class starts here
 class CDummyWeaponClassExtra:
-	public CDummyWeaponClass, public CMG36
+	public CDummyWeaponClass
 {
 public:
 	virtual void Precache() {};

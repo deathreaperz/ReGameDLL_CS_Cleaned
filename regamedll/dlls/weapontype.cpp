@@ -30,6 +30,8 @@ WeaponStruct g_weaponStruct[MAX_WEAPONS] =
 	{ WEAPON_GALIL,     GALIL_PRICE,        CT,             AUTOBUYCLASS_PRIMARY,   AMMO_556MM_PRICE    },
 				// FIX: there is a bug, the cost of galil $2000 instead $2250
 
+	//new weapon starts here
+	{ WEAPON_M60,      M60_PRICE,         TERRORIST | CT, AUTOBUYCLASS_PRIMARY,   AMMO_556MM_PRICE    },
 	{ WEAPON_SHIELDGUN, SHIELDGUN_PRICE,    TERRORIST,      AUTOBUYCLASS_PRIMARY,   0                   },
 
 	{ 0, 0, 0, 0, 0 },
@@ -39,8 +41,6 @@ WeaponStruct g_weaponStruct[MAX_WEAPONS] =
 	{ 0, 0, 0, 0, 0 },
 	{ 0, 0, 0, 0, 0 },
 
-	//new weapon starts here
-	{ WEAPON_MG36,      MG36_PRICE,         TERRORIST|CT,   AUTOBUYCLASS_PRIMARY,   AMMO_556MM_PRICE    },
 };
 
 AutoBuyInfoStruct g_autoBuyInfo[] =
@@ -69,6 +69,7 @@ AutoBuyInfoStruct g_autoBuyInfo[] =
 	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_SMG,        "ump45",    "weapon_ump45"          },
 	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_SMG,        "p90",      "weapon_p90"            },
 	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_MACHINEGUN, "m249",     "weapon_m249"           },
+	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_MACHINEGUN, "m60",     "weapon_m60"           }, //new weapon
 	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_AMMO,       "primammo", "primammo"              },
 	{ AUTOBUYCLASS_SECONDARY|AUTOBUYCLASS_AMMO,     "secammo",  "secammo"               },
 	{ AUTOBUYCLASS_ARMOR,                           "vest",     "item_kevlar"           },
@@ -79,7 +80,6 @@ AutoBuyInfoStruct g_autoBuyInfo[] =
 	{ AUTOBUYCLASS_NIGHTVISION,                     "nvgs",     "nvgs"                  },
 	{ AUTOBUYCLASS_DEFUSER,                         "defuser",  "defuser"               },
 	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_SHIELD,     "shield",   "shield"                },
-	{ AUTOBUYCLASS_PRIMARY|AUTOBUYCLASS_MACHINEGUN, "mg36",     "weapon_mg36"           }, //new weapon
 	{ AUTOBUYCLASS_NONE,                            nullptr,     nullptr                },
 };
 
@@ -123,7 +123,7 @@ WeaponAliasInfo g_weaponAliasInfo[] =
 	{ "elite",      WEAPON_ELITE        },
 	{ "fiveseven",  WEAPON_FIVESEVEN    },
 	{ "mp5navy",    WEAPON_MP5N         },
-	{ "mg36",       WEAPON_MG36         }, //new weapon
+	{ "m60",       WEAPON_M60         }, //new weapon
 	{ nullptr,      WEAPON_NONE         },
 };
 
@@ -171,7 +171,7 @@ WeaponBuyAliasInfo g_weaponBuyAliasInfo[] =
 	{ "p90",        WEAPON_P90,         "#FNP90"               },
 	{ "c90",        WEAPON_P90,         "#FNP90"               },
 	{ "m249",       WEAPON_M249,        "#M249"                },
-	{ "mg36",       WEAPON_MG36,        "#MG36"                }, //new weapon
+	{ "m60",       WEAPON_M60,        "#M60"                }, //new weapon
 	{ nullptr,      WEAPON_NONE,        nullptr                },
 };
 
@@ -214,6 +214,7 @@ WeaponClassAliasInfo g_weaponClassAliasInfo[] =
 	{ "elite",      WEAPONCLASS_PISTOL          },
 	{ "fiveseven",  WEAPONCLASS_PISTOL          },
 	{ "mp5navy",    WEAPONCLASS_SUBMACHINEGUN   },
+	{ "m60",       WEAPONCLASS_MACHINEGUN      }, //new weapon
 	{ "grenade",    WEAPONCLASS_GRENADE         },
 	{ "pistol",     WEAPONCLASS_PISTOL          },
 	{ "SMG",        WEAPONCLASS_SUBMACHINEGUN   },
@@ -221,7 +222,6 @@ WeaponClassAliasInfo g_weaponClassAliasInfo[] =
 	{ "shotgun",    WEAPONCLASS_SHOTGUN         },
 	{ "rifle",      WEAPONCLASS_RIFLE           },
 	{ "sniper",     WEAPONCLASS_SNIPERRIFLE     },
-	{ "mg36",       WEAPONCLASS_MACHINEGUN      }, //new weapon
 	{ "none",       WEAPONCLASS_NONE            },
 	{ nullptr,      WEAPONCLASS_NONE            },
 };
@@ -267,13 +267,13 @@ WeaponInfoStruct g_weaponInfo_default[] =
 	{ WEAPON_SMOKEGRENADE,  (WeaponCostType)SMOKEGRENADE_PRICE, AMMO_SMOKEGRENADE_PRICE, AMMO_SMOKEGRENADE_BUY, 0,                  MAX_AMMO_SMOKEGRENADE,  AMMO_SMOKEGRENADE,  "weapon_smokegrenade", nullptr,           "SmokeGrenade" },
 	{ WEAPON_FLASHBANG,     (WeaponCostType)FLASHBANG_PRICE,    AMMO_FLASHBANG_PRICE,    AMMO_FLASHBANG_BUY,    0,                  MAX_AMMO_FLASHBANG,     AMMO_FLASHBANG,     "weapon_flashbang",    nullptr,           "Flashbang"    },
 #endif
-
+	//new weapon starts here
+	{ WEAPON_M60,			 M60_PRICE,    AMMO_556MM_PRICE,                            AMMO_556NATOBOX_BUY,   M60_MAX_CLIP,      MAX_AMMO_556NATOBOX,    AMMO_556NATOBOX,    "weapon_m60",         "ammo_556natobox", "556NatoBox"   },
 	{ WEAPON_SHIELDGUN,      SHIELDGUN_PRICE,                   0,                       0,                     0,                  0,                      AMMO_NONE,          "weapon_shield",       nullptr,           nullptr        },
 #ifndef REGAMEDLL_FIXES
 	{ 0,                     0,                                 0,                       0,                     0,                  0,                      AMMO_NONE,          nullptr,               nullptr,           nullptr        },
 #endif
-	//new weapon starts here
-	{ WEAPON_MG36,      MG36_PRICE,         AMMO_556MM_PRICE,                            AMMO_556NATOBOX_BUY,   MG36_MAX_CLIP,      MAX_AMMO_556NATOBOX,    AMMO_556NATOBOX,    "weapon_mg36",         "ammo_556natobox", "556NatoBox"   },
+
 };
 
 WeaponInfoStruct g_weaponInfo[ARRAYSIZE(g_weaponInfo_default)];
@@ -329,7 +329,7 @@ WeaponSlotInfo g_weaponSlotInfo_default[] = {
 	{ WEAPON_SG552,         PRIMARY_WEAPON_SLOT,    "weapon_sg552"          },
 	{ WEAPON_AK47,          PRIMARY_WEAPON_SLOT,    "weapon_ak47"           },
 	{ WEAPON_P90,           PRIMARY_WEAPON_SLOT,    "weapon_p90"            },
-	{ WEAPON_MG36,          PRIMARY_WEAPON_SLOT,    "weapon_mg36"           }, //new weapon
+	{ WEAPON_M60,          PRIMARY_WEAPON_SLOT,    "weapon_m60"           }, //new weapon
 	{ WEAPON_SHIELDGUN,     NONE_SLOT,              "weapon_shield"         },
 };
 
@@ -442,7 +442,7 @@ WeaponClassType WeaponIDToWeaponClass(ArmouryItemPack id)
 		return WEAPONCLASS_SHOTGUN;
 
 	case ARMOURY_M249:
-	case ARMOURY_MG36: //new weapon
+	case ARMOURY_M60: //new weapon
 		return WEAPONCLASS_MACHINEGUN;
 
 	default:
@@ -475,8 +475,8 @@ bool IsPrimaryWeapon(int id)
 	case WEAPON_SG552:
 	case WEAPON_AK47:
 	case WEAPON_P90:
+	case WEAPON_M60: //new weapon
 	case WEAPON_SHIELDGUN:
-	case WEAPON_MG36: //new weapon
 		return true;
 	default:
 		break;
@@ -628,8 +628,8 @@ bool CanBuyWeaponByMaptype(int playerTeam, WeaponIdType weaponID, bool useAssasi
 			case WEAPON_TMP:
 			case WEAPON_DEAGLE:
 			case WEAPON_P90:
+			case WEAPON_M60: //new weapon
 			case WEAPON_SHIELDGUN:
-			case WEAPON_MG36: //new weapon
 				return true;
 			default:
 				return false;
@@ -679,7 +679,7 @@ bool CanBuyWeaponByMaptype(int playerTeam, WeaponIdType weaponID, bool useAssasi
 		case WEAPON_TMP:
 		case WEAPON_DEAGLE:
 		case WEAPON_P90:
-		case WEAPON_MG36: //new weapon
+		case WEAPON_M60: //new weapon
 		case WEAPON_SHIELDGUN:
 			return true;
 		default:
@@ -708,7 +708,7 @@ bool CanBuyWeaponByMaptype(int playerTeam, WeaponIdType weaponID, bool useAssasi
 		case WEAPON_SG552:
 		case WEAPON_AK47:
 		case WEAPON_P90:
-		case WEAPON_MG36: //new weapon
+		case WEAPON_M60: //new weapon
 			return true;
 		default:
 			return false;

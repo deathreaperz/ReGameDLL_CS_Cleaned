@@ -221,7 +221,13 @@ enum ModelName
 	MODEL_MILITIA,
 	MODEL_SPETSNAZ,
 	MODEL_707, //new skin
+	MODEL_ARA, //new skin
+	MODEL_NLC, //new skin
 	MODEL_RBC, //new skin
+	MODEL_SAF, //new skin
+	MODEL_SAT, //new skin
+	MODEL_SOZO, //new skin
+	MODEL_VC, //new skin
 	MODEL_AUTO
 };
 

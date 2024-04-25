@@ -61,7 +61,7 @@ enum WeaponIdType
 	WEAPON_AK47,
 	WEAPON_KNIFE,
 	WEAPON_P90,
-	WEAPON_MG36, //new weapon
+	WEAPON_M60, //new weapon
 	WEAPON_SHIELDGUN = 99
 };
 
@@ -139,7 +139,7 @@ enum WeaponCostType
 	GALIL_PRICE     = 2000,
 	FAMAS_PRICE     = 2250,
 	SHIELDGUN_PRICE = 2200,
-	MG36_PRICE = 3500, //new weapon
+	M60_PRICE      = 4700, //new weapon
 };
 
 enum WeaponState
@@ -185,7 +185,7 @@ enum ClipGiveDefault
 	AK47_DEFAULT_GIVE           = 30,
 	//KNIFE_DEFAULT_GIVE        = 1,
 	P90_DEFAULT_GIVE            = 50,
-	MG36_DEFAULT_GIVE            = 100, //new weapon
+	M60_DEFAULT_GIVE           = 100, //new weapon
 };
 
 enum ClipSizeType
@@ -214,7 +214,7 @@ enum ClipSizeType
 	SG552_MAX_CLIP      = 30,
 	AK47_MAX_CLIP       = 30,
 	P90_MAX_CLIP        = 50,
-	MG36_MAX_CLIP        = 100, //new weapon
+	M60_MAX_CLIP       = 100, //new weapon
 };
 
 enum WeightWeapon
@@ -248,7 +248,7 @@ enum WeightWeapon
 	AK47_WEIGHT         = 25,
 	P90_WEIGHT          = 26,
 	KNIFE_WEIGHT        = 0,
-	MG36_WEIGHT        = 75, //new weapon
+	M60_WEIGHT         = 75, //new weapon
 };
 
 enum MaxAmmoType

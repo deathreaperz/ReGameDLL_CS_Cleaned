@@ -23,7 +23,7 @@ Default
 	Cost = 0
 	Difficulty = NORMAL
 	VoicePitch = 100
-	Skin = 7
+	Skin = 10
 End
 
 //----------------------------------------------------------------------------
@@ -105,7 +105,7 @@ End
 
 Template Power
 	WeaponPreference = m249
-	WeaponPreference = mg36
+	WeaponPreference = m60
 	WeaponPreference = xm1014
 	WeaponPreference = m3
 	WeaponPreference = famas
@@ -139,6 +139,7 @@ Template Shield
 End
 
 Template Spray
+	WeaponPreference = m60
 	WeaponPreference = p90
 	WeaponPreference = ump45
 	WeaponPreference = mp5
@@ -361,6 +362,36 @@ Elite Barnaby
 	VoicePitch = 83
 End
 
+Elite Kenneth
+	VoicePitch = 86
+	Teamwork = 1
+End
+
+Elite Yasin
+	VoicePitch = 90
+	Teamwork = 1
+End
+
+Elite Gerald
+	VoicePitch = 99
+	Teamwork = 1
+End
+
+Elite Kierce
+	VoicePitch = 93
+	Teamwork = 1
+End
+
+Elite+AutomaticSniper Rocco
+	VoicePitch = 97
+	Teamwork = 1
+End
+
+Elite+AutomaticSniperT Glenn
+	VoicePitch = 90
+	Teamwork = 1
+End
+
 //----------------------------------------
 
 Expert+RifleT Arnold
@@ -445,6 +476,36 @@ Expert Hamzah
 	VoicePitch = 70
 End
 
+Expert Bailey
+	VoicePitch = 110
+	Teamwork = 1
+End
+
+Expert Lawrence
+	VoicePitch = 85
+	Teamwork = 1
+End
+
+Expert Jesse
+	VoicePitch = 98
+	Teamwork = 1
+End
+
+Expert Owen
+	VoicePitch = 91
+	Teamwork = 1
+End
+
+Expert Haris
+	VoicePitch = 106
+	Teamwork = 1
+End
+
+Expert Jenna
+	VoicePitch = 102
+	Teamwork = 1
+End
+
 //----------------------------------------
 
 VeryHard+Power Cory
@@ -469,6 +530,35 @@ VeryHard+RifleT Vinny
 	Team = T
 End
 
+VeryHard Khalid
+	VoicePitch = 91
+	Teamwork = 1
+End
+
+VeryHard Jonah
+	VoicePitch = 104
+	Teamwork = 1
+End
+
+VeryHard Ashley
+	VoicePitch = 102
+	Teamwork = 1
+End
+
+VeryHard Aron
+	VoicePitch = 92
+	Teamwork = 1
+End
+
+VeryHard Dawn
+	VoicePitch = 89
+	Teamwork = 1
+End
+
+VeryHard Melvin
+	VoicePitch = 109
+	Teamwork = 1
+End
 
 //----------------------------------------
 
@@ -568,6 +658,36 @@ Hard+Shield Bulk
 	Skin = 3
 	VoicePitch = 86
 	Team = CT
+End
+
+Hard Marco
+	VoicePitch = 100
+	Teamwork = 1
+End
+
+Hard Faith
+	VoicePitch = 91
+	Teamwork = 1
+End
+
+Hard Sean
+	VoicePitch = 97
+	Teamwork = 1
+End
+
+Hard Lee
+	VoicePitch = 85
+	Teamwork = 1
+End
+
+Hard Warren
+	VoicePitch = 95
+	Teamwork = 1
+End
+
+Hard Ajay
+	VoicePitch = 94
+	Teamwork = 1
 End
 
 //----------------------------------------
@@ -699,6 +819,36 @@ Tough+AutomaticSniperT Claude
 	Team = T
 End
 
+Tough Jeremy
+	VoicePitch = 103
+	Teamwork = 1
+End
+
+Tough Lewis
+	VoicePitch = 92
+	Teamwork = 1
+End
+
+Tough Herbert
+	VoicePitch = 94
+	Teamwork = 1
+End
+
+Tough Ismail
+	VoicePitch = 86
+	Teamwork = 1
+End
+
+Tough Ray
+	VoicePitch = 88
+	Teamwork = 1
+End
+
+Tough Antonio
+	VoicePitch = 89
+	Teamwork = 1
+End
+
 //----------------------------------------
 
 Normal+Rifle Adam
@@ -815,6 +965,36 @@ Normal Yahn
 	VoicePitch = 92
 End
 
+Normal Zakaria
+	VoicePitch = 100
+	Teamwork = 1
+End
+
+Normal Tyler
+	VoicePitch = 86
+	Teamwork = 1
+End
+
+Normal Alvin
+	VoicePitch = 103
+	Teamwork = 1
+End
+
+Normal Nicholas
+	VoicePitch = 90
+	Teamwork = 1
+End
+
+Normal Eden
+	VoicePitch = 91
+	Teamwork = 1
+End
+
+Normal Andre
+	VoicePitch = 97
+	Teamwork = 1
+End
+
 //----------------------------------------
 
 Fair Alfred
@@ -907,6 +1087,36 @@ End
 
 Fair Wyatt
 	VoicePitch = 94
+End
+
+Fair Haider
+	VoicePitch = 103
+	Teamwork = 1
+End
+
+Fair Osborn
+	VoicePitch = 95
+	Teamwork = 1
+End
+
+Fair Hasan
+	VoicePitch = 93
+	Teamwork = 1
+End
+
+Fair Stefan
+	VoicePitch = 105
+	Teamwork = 1
+End
+
+Fair Harrison
+	VoicePitch = 110
+	Teamwork = 1
+End
+
+Fair Aaron
+	VoicePitch = 108
+	Teamwork = 1
 End
 
 //----------------------------------------
@@ -1053,4 +1263,34 @@ End
 
 Easy Yuri
 	VoicePitch = 110
+End
+
+Easy+Power Isaiah
+	VoicePitch = 109
+	Teamwork = 1
+End
+
+Easy+Spray Lloyd
+	VoicePitch = 92
+	Teamwork = 1
+End
+
+Easy+Rifle Benji
+	VoicePitch = 85
+	Teamwork = 1
+End
+
+Easy+RifleT Mac
+	VoicePitch = 93
+	Teamwork = 1
+End
+
+Easy+Punch Joss
+	VoicePitch = 94
+	Teamwork = 1
+End
+
+Easy+PunchT William
+	VoicePitch = 110
+	Teamwork = 1
 End

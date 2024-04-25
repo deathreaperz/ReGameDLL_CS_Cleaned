@@ -100,7 +100,13 @@ char *sPlayerModelFiles[] =
 	"models/player/spetsnaz/spetsnaz.mdl", // CZ
 	"models/player/militia/militia.mdl",    // CZ
 	"models/player/707/707.mdl",    // CZ //new skin
-	"models/player/rbc/rbc.mdl"    // CZ //new skin
+	"models/player/ara/ara.mdl",    // CZ //new skin
+	"models/player/nlc/nlc.mdl",    // CZ //new skin
+	"models/player/rbc/rbc.mdl",    // CZ //new skin
+	"models/player/saf/saf.mdl",    // CZ //new skin
+	"models/player/sat/sat.mdl",    // CZ //new skin
+	"models/player/sozo/sozo.mdl",    // CZ //new skin
+	"models/player/vc/vc.mdl"    // CZ //new skin
 };
 
 bool g_skipCareerInitialSpawn = false;
@@ -1220,7 +1226,7 @@ void BuyMachineGun(CBasePlayer *pPlayer, int iSlot) //new weapon
 	switch (iSlot)
 	{
 	case 1:
-		buyWeapon = WEAPON_MG36;
+		buyWeapon = WEAPON_M60;
 		break;
 	case 2:
 		buyWeapon = WEAPON_M249;
@@ -1649,6 +1655,27 @@ void EXT_FUNC __API_HOOK(HandleMenu_ChooseAppearance)(CBasePlayer *pPlayer, int 
 				appearance.model_name = "rbc";
 				break;
 			}
+		case 7: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_ARA;
+				appearance.model_name = "ara";
+				break;
+			}
+		case 8: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_NLC;
+				appearance.model_name = "nlc";
+				break;
+			}
+		case 9: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_VC;
+				appearance.model_name = "vc";
+				break;
+			}
 		default:
 			if (TheBotProfiles->GetCustomSkinModelname(slot) && pPlayer->IsBot())
 			{
@@ -1703,6 +1730,27 @@ void EXT_FUNC __API_HOOK(HandleMenu_ChooseAppearance)(CBasePlayer *pPlayer, int 
 			{
 				appearance.model_id = MODEL_707;
 				appearance.model_name = "707";
+				break;
+			}
+		case 7: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_SAF;
+				appearance.model_name = "saf";
+				break;
+			}
+		case 8: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_SAT;
+				appearance.model_name = "sat";
+				break;
+			}
+		case 9: //new skin
+			if (AreRunningCZero())
+			{
+				appearance.model_id = MODEL_SOZO;
+				appearance.model_name = "sozo";
 				break;
 			}
 		default:
@@ -2091,14 +2139,14 @@ BOOL EXT_FUNC __API_HOOK(HandleMenu_ChooseTeam)(CBasePlayer *pPlayer, int slot)
 			{
 			case CT:
 				if (AreRunningCZero())
-					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_CT, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5 | MENU_KEY_6), "#CT_Select");
+					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_CT, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5 | MENU_KEY_6 | MENU_KEY_7 | MENU_KEY_8 | MENU_KEY_9), "#CT_Select");
 				else
 					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_CT, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5), "#CT_Select");
 				break;
 
 			case TERRORIST:
 				if (AreRunningCZero())
-					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_T, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5 | MENU_KEY_6), "#Terrorist_Select");
+					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_T, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5 | MENU_KEY_6 | MENU_KEY_7 | MENU_KEY_8 | MENU_KEY_9), "#Terrorist_Select");
 				else
 					ShowVGUIMenu(pPlayer, VGUI_Menu_Class_T, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_3 | MENU_KEY_4 | MENU_KEY_5), "#Terrorist_Select");
 				break;
@@ -2971,7 +3019,7 @@ void EXT_FUNC InternalCommand(edict_t *pEntity, const char *pcmd, const char *pa
 							if (CSGameRules()->m_bMapHasVIPSafetyZone && pPlayer->m_iTeam == TERRORIST)
 								ShowVGUIMenu(pPlayer, VGUI_Menu_Buy_MachineGun, MENU_KEY_0, "#AS_T_BuyMachineGun");
 							else
-								ShowVGUIMenu(pPlayer, VGUI_Menu_Buy_MachineGun, (MENU_KEY_1 | MENU_KEY_0), "#BuyMachineGun");
+								ShowVGUIMenu(pPlayer, VGUI_Menu_Buy_MachineGun, (MENU_KEY_1 | MENU_KEY_2 | MENU_KEY_0), "#BuyMachineGun");
 							break;
 						}
 						case VGUI_MenuSlot_Buy_PrimAmmo:
@@ -4019,7 +4067,7 @@ void ClientPrecache()
 	PRECACHE_MODEL("models/p_famas.mdl");
 	PRECACHE_MODEL("models/p_shield.mdl");
 	PRECACHE_MODEL("models/w_shield.mdl");
-	PRECACHE_MODEL("models/p_mg36.mdl"); //new weapon
+	PRECACHE_MODEL("models/p_m60.mdl"); //new weapon
 
 	Vector temp = g_vecZero;
 	Vector vMin(-38, -24, -41);
@@ -4135,7 +4183,7 @@ void ClientPrecache()
 	}
 
 	ENGINE_FORCE_UNMODIFIED(force_model_specifybounds, (float *)&vMin, (float *)&vMax, "models/p_m249.mdl");
-	ENGINE_FORCE_UNMODIFIED(force_model_specifybounds, (float *)&vMin, (float *)&vMax, "models/p_mg36.mdl"); //new weapon
+	ENGINE_FORCE_UNMODIFIED(force_model_specifybounds, (float *)&vMin, (float *)&vMax, "models/p_m60.mdl"); //new weapon
 
 	vMin = Vector(-7, -7, -15);
 	vMax = Vector(7, 7, 15);
